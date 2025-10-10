@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1><i class="fa-solid fa-check-circle"></i> MyTasks</h1>
+            <p id="date">date is </p>
+        </header> 
+
+        <div class="todo-input">
+            <input type="text" id="task-input" placeholder="What do you need to do?" />
+            <button id="add-task">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+
+        <div class="filters">
+            <span class="filter active" data-filter="all">ALL</span>
+            <span class="filter" data-filter="active">Active</span>
+            <span class="filter" data-filter="completed">Completed</span>
+        </div>
+
+        <div class="todos-container">
+            <ul id="todos-list" class="hidden"></ul>
+
+            <div class="empty-state hidden">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <p>No Tasks here yet</p>
+            </div>
+        </div>
+
+        <footer>
+            <span id="item-left">0 items left</span>
+            <button id="clear-completed">Clear completed</button>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
