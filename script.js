@@ -10,10 +10,10 @@ const filters = document.querySelectorAll(".filter");
 let todos = [];
 let currentFilter = "all";
 
-
+// 点击添加按钮
 addTaskBtn.addEventListener("click", () => addTodo(taskInput.value));
 
-
+// 回车添加
 taskInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") addTodo(taskInput.value);
 });
